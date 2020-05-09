@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 set -e 
+
+mkdir -p /tmp/proxy && cd $_
+wget https://github.com/sysadmin001/gcp/raw/master/proxy.tar.gz
+tar xzf proxy.tar.gz -C /tmp/proxy/
+
 # https://github.com/thekvs/microproxy
 sudo useradd microproxy -s /sbin/nologin
 sudo mkdir -p /opt/microproxy
